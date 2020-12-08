@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính chỉ số cân nặng</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>cân năng</th>
+        <th> chiều cao</th>
+    </tr>
+    <tr>
+        <td><input type="number" id="kg"></td>
+        <td><input type="number" id="m"></td>
+    </tr>
+    <input value="xem kết quả" type="button" onclick="result() ">
+</table>
+<script>
+
+    function result() {
+        let a = document.getElementById("kg");
+        let b = document.getElementById("m");
+        let x = parseFloat(parseFloat(a));
+        let y = parseFloat(parseFloat(b));
+
+        let c = x / (y * y);
+        bmi = (c < 18.5) ? 'underweight' : (18.5<= c < 25) ? 'normal' : (25<= c < 30) ? 'overweight' : (30 <= c) ? 'obese' : 'tooobese';
+        document.write(bmi);
+
+    }
+</script>
+</body>
+</html>
