@@ -6,90 +6,116 @@
 
 </head>
 <body>
-<form action="">
-<caption ><h1>Customer Information</h1></caption>
-<table border="1" style="background-color: blueviolet" >
-  <tr>
-      <th>Your fullname</th>
-      <td><input type="text" id="" name=""></td>
-  </tr>
+
+<caption><h1>Customer Information</h1></caption>
+<table border="1" style="background-color: blueviolet">
+    <tr>
+        <th>Your fullname</th>
+        <td><input type="text" id="name" name=""></td>
+    </tr>
     <tr>
         <th>Identity card number</th>
-        <td><input type="number" id="" name=""></td>
+        <td><input type="number" id="id" name=""></td>
     </tr>
     <tr>
         <th>Day of Birth</th>
-        <td><input type="date" id="" name=""></td>
+        <td><input type="date" id="date" name=""></td>
     </tr>
     <tr>
         <th>Your Email</th>
-        <td><input type="email" id="" name=""></td>
+        <td><input type="email" id="email" name=""></td>
     </tr>
     <tr>
         <th>Your Address</th>
-        <td><input type="text" id="" name=""></td>
+        <td><input type="text" id="add" name=""></td>
     </tr>
     <tr>
         <th>Customer Type</th>
         <td >
-            <select name="" id="">
-                <option value="">Diamond</option>
-                <option value="">Platinum</option>
-                <option value="">Gold</option>
-                <option value="">Silver</option>
-                <option value="">Member</option>
+            <select id="customer_type">
+                <option>Diamond</option>
+                <option>Platinum</option>
+                <option>Gold</option>
+                <option>Silver</option>
+                <option>Member</option>
             </select>
         </td>
     </tr>
     <tr>
         <th>Discount</th>
-        <td><input type="text" id="discount" name=""></td>
+        <td><input type="text" id="discount"value=""></td>
     </tr>
     <tr>
         <th>Quantity Included</th>
-        <td><input type="number" id="" name=""></td>
+        <td><input type="number" id="quantity"></td>
     </tr>
     <tr>
         <th>Rentdays</th>
-        <td><input type="number" id="b" name=""></td>
+        <td><input type="number" id="rentdays"></td>
     </tr>
     <tr>
         <th>Type of Service</th>
-        <td>
-            <select name="" id="a">
-                <option value="" >Villa 500$/day</option>
-                <option value="">House 300$/day</option>
-                <option value="">Room 100$/day</option>
+        <td >
+            <select id="service">
+                <option value="500">Villa 500$/day</option>
+                <option value="300">House 300$/day</option>
+                <option value="100">Room 100$/day</option>
             </select>
 
         </td>
     </tr>
     <tr>
         <th>Type of Room</th>
-        <td>
-            <select name="" id="">
-                <option value="">Vip</option>
-                <option value="">Business</option>
-                <option value="">Normal</option>
+        <td >
+            <select id="type_of_room">
+                <option value="vip">Vip</option>
+                <option value="business">Business</option>
+                <option value="normal">Normal</option>
             </select>
         </td>
     </tr>
 
 
-  
-
-
 </table>
 <input type="submit" value="submit" style="background-color: greenyellow;width: 100px;" onclick="submit()">
 <input type="reset" value="reset" style="width: 100px">
-</form>
+
 </body>
 </html>
 <script>
     function submit() {
-        let =document.getElementById()
-        p=a*b*discount +
+        let a = document.getElementById("name").value;
+        let b = document.getElementById("id").value;
+        let c = document.getElementById("date").value;
+        let d = document.getElementById("email").value;
+        let e = document.getElementById("add").value;
+        let f = document.getElementById("customer_type").value;
+        let g = document.getElementById("discount").value;
+        let h = document.getElementById("quantity").value;
+        let k = document.getElementById("rentdays").value;
+        let l = document.getElementById("service").value;
+        let m = document.getElementById("type_of_room").value;
+
+        let information2 = "Hãy xác nhận lại thông tin của bạn !!! \n"
+            + "name : " + a + "\n"
+            + "Email: " + d + "\n"
+            + "discount : " + g + "\n"
+            + "add :" + e + "\n"
+            + "date :" + c + "\n"
+            + "customer_type :" + f + "\n"
+            + "id :" + b + "\n"
+            + "quantity:" + h + "\n"
+            + "rentdays :" + k + "\n"
+            + "service :" + l + "\n"
+            + "type_of_room :" + m + "\n"
+
+
+        alert(information2);
+        let total=k*l*(1-g/100)
+        alert(total);
+
+
     }
-    
+
 </script>
 

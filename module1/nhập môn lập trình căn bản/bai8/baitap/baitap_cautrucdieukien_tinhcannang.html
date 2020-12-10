@@ -19,14 +19,14 @@
 <script>
 
     function result() {
-        let a = document.getElementById("kg");
-        let b = document.getElementById("m");
+        let a = document.getElementById("kg").value;
+        let b = document.getElementById("m").value;
         let x = parseFloat(parseFloat(a));
         let y = parseFloat(parseFloat(b));
 
         let c = x / (y * y);
-        bmi = (c < 18.5) ? 'underweight' : (18.5<= c < 25) ? 'normal' : (25<= c < 30) ? 'overweight' : (30 <= c) ? 'obese' : 'tooobese';
-        document.write(bmi);
+        bmi = (c < 18.5) ? 'underweight' : (c < 25) ? 'normal' : (c < 30) ? 'overweight' : (30 <= c) ? 'obese' : 'tooobese';
+        alert(bmi);
 
     }
 </script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lãi suất ngân hàng</title>
+</head>
+<body>
+<script>
+    let a=parseFloat(prompt("số tiền gửi"));
+    let b=parseFloat(prompt("số tháng gửi"));
+    let c;
+    //lãi suất ngân hàng theo b tháng
+    const r=0.05;
+    //r là phần trăm lãi suất ngân hàng mỗi tháng.
+    if(b==1){
+        c=a*r
+        alert(c);
+    }else if(b>1){
+        c=a*(Math.pow(1+r,b));
+        alert(c);
+
+    }
+</script>
+</body>
+</html>

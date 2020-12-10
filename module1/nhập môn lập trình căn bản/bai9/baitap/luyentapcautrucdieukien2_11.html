@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thu nhập cá nhân</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt("nhập thu nhập cá nhân"));
+    let tienthue;
+    if (a < 10000000) {
+        tienthue = a * 0.01;
+        alert("số tiền thuế phải nộp " + tienthue);
+    } else if (a > 10000000) {
+
+        tienthue = a * 0.2;
+        alert("số tiền thuế phải nộp " + tienthue);
+    }
+
+
+</script>
+</body>
+</html>

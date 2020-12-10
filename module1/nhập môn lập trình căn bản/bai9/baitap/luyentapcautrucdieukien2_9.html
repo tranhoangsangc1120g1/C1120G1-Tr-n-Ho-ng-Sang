@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra a b c là cạnh tam giác</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt("nhập a"))
+    let b = parseFloat(prompt("nhập b"))
+    let c = parseFloat(prompt("nhập c"))
+    if (a > 0 && b > 0 && c > 0 && (a + b > c)
+        && (b + c > a)
+        && (a + c > b)) {
+        alert(" là 3 cạnh tam giác")
+    } else {
+        alert("không phải 3 cạnh tam giác")
+    }
+
+
+</script>
+</body>
+</html>

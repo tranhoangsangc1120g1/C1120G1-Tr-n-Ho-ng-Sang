@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
+</head>
+<body>
+<script>
+    let a=parseFloat(prompt("nhập chữ điện"))
+   let thanhtien;
+    if(a<100 && a>0){
+        thanhtien=a*1000;
+        alert("số tiền phải trả" +thanhtien)
+    }else {
+        if(a>100 && a<1000){
+            thanhtien=a*1200;
+            alert("số tiền phải trả" + thanhtien)
+        }else  {
+            thanhtien=a*2000;
+            alert(thanhtien +" "+ "còn dùng trên số chữ cắt điện không cho dùng")
+        }
+
+
+    }
+</script>
+</body>
+</html>
