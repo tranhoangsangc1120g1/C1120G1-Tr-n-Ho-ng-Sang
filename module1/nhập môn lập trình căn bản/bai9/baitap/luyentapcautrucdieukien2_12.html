@@ -6,18 +6,21 @@
 </head>
 <body>
 <script>
-    let a=parseFloat(prompt("số tiền gửi"));
+    let a=parseFloat(prompt("số tiền vay"));
     let b=parseFloat(prompt("số tháng gửi"));
-    let c;
     //lãi suất ngân hàng theo b tháng
+
+    //số tiền nợ sau b tháng;
     const r=0.05;
     //r là phần trăm lãi suất ngân hàng mỗi tháng.
+    let c=a*(Math.pow(1+r,b));
     if(b==1){
-        c=a*r
+        c=r;
         alert(c);
     }else if(b>1){
-        c=a*(Math.pow(1+r,b));
+
         alert(c);
+
 
     }
 </script>

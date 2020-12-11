@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số nguyên tố</title>
+</head>
+<body>
+<script>
+    let k = parseInt(prompt("nhập số lượng số"))
+    let i = 3;
+    if (k < 2) {
+        document.write("không phải là số nguyên tố")
+
+    } else if (k == 2) {
+        document.write("2 là số nguyên tố")
+
+    } else if (k>2) {
+
+
+
+
+        // do {
+        //     for ()
+        //     if (i % (i-1) !== 0) {
+        //         document.write(i + " là các số nguyên tố")
+        //     }
+        //     i += 2;
+        //
+        //
+        // } while (i <= k);
+
+        let soNT = true;
+        let kq = "so nguyen to la: 2"
+        for (let i = 3; i <= k; i += 2) {
+            for(let j=2; j < i;j++){
+                if(i % j == 0){
+                    soNT = false;
+                    break;
+                }
+            }
+
+            if(soNT === true){
+                kq = kq + ", "+i;
+            }
+            soNT = true;
+        }
+        console.log(kq);
+
+    }
+
+
+</script>
+</body>
+</html>

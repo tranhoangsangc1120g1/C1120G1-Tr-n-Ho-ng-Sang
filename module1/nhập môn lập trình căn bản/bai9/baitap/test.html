@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table id="myTable" border="1">
+
+</table>
+<script>
+
+    let display = "";
+    for (let ngang = 1; ngang <= 9; ngang++) {
+        for (let doc = 2; doc <= 9; doc++) {
+            if (doc == 1) {
+                display = display + "<tr>";
+            }
+                display = display + "<td>"+ ngang + "X" + doc + "=" + (ngang * doc)+ "</td>";
+                if (doc == 9) {
+                    display = display + "</tr>";
+                }
+            }
+
+
+    } document.getElementById("myTable").innerHTML = display;
+</script>
+</body>
+</html>
