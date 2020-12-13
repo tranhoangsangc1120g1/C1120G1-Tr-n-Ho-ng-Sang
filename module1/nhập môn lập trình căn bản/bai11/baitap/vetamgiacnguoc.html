@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau</title>
+</head>
+<body>
+<script>
+let space;
+let star;
+let spacestr="";
+let starstr="";
+for (let i=0;i<=5;i++){
+    space=i;
+    star=5-space;
+    for (let j=1;j<=star;j++){
+       starstr+="*";
+    }
+    for (let k=1;k<=space;k++){
+       spacestr+="&nbsp&nbsp";
+    }
+    document.write(spacestr+starstr+"<br>")
+    starstr="";
+    spacestr="";
+}
+</script>
+
+</body>
+</html>

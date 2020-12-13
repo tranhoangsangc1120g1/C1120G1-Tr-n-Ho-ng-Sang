@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiện 20 số đầu tiên fibonacci</title>
+</head>
+<body>
+<script>
+    function randomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+    alert("Nhập khoảng số bạn muốn đoán !");
+
+    let fromNumber = prompt('Min', '');
+    let toNumber = prompt('Max', '');
+    let numberRandom = randomNumber(parseInt(fromNumber), parseInt(toNumber));
+    for (let count=1;count<=3;count++) {
+        let inputNumber = parseInt(prompt('Nhập số bạn muốn đoán', ''));
+        if (inputNumber === numberRandom) {
+            alert("Input: " + inputNumber + "\nResult: " + numberRandom + "\nchính xác");
+        } else if (inputNumber < numberRandom) {
+            alert("Input: " + inputNumber + "\nResult: " + numberRandom + "\n Input bé hơn Result");
+        } else {
+            alert("Input: " + inputNumber + "\nResult: " + numberRandom + "\n Input lớn hơn Result");
+        }
+    }
+</script>
+</body>
+</html>

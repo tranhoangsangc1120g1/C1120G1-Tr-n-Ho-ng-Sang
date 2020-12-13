@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in hình trái tim</title>
+</head>
+<body>
+<script>
+    let star;
+    let space;
+    let starstr = "";
+    let spacestr = "";
+    for (let i = 1; i <= 21; i++) {
+        if (i <= 10) {
+            star = i;
+            for (let j = 1; j <= star; j++) {
+
+                starstr += "*";
+                space = 10 - star;
+                for (let m = 1; m <= space; m++) {
+                    spacestr += "&nbsp&nbsp";
+                    document.write(spacestr + starstr + "<br>")
+                }
+            }
+
+        } else if (i <= 21) {
+            star = i;
+            for (let k = 11; k <= 21; k++) {
+
+                star += "*";
+                space = 21 - i;
+                for (let n = 11; n <= space; n++) {
+                    spacestr += "&nbsp&nbsp";
+                    document.write(starstr + spacestr + "<br>")
+                }
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
