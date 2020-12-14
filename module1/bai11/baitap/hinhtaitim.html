@@ -19,22 +19,23 @@
                 space = 10 - star;
                 for (let m = 1; m <= space; m++) {
                     spacestr += "&nbsp&nbsp";
-                    document.write(spacestr + starstr + "<br>")
+                    document.write(spacestr + starstr )
                 }
             }
 
         } else if (i <= 21) {
             star = i;
-            for (let k = 11; k <= 21; k++) {
+            for (let k = 12; k <= 21; k++) {
 
                 star += "*";
                 space = 21 - i;
-                for (let n = 11; n <= space; n++) {
+                for (let n = 12; n <= space; n++) {
                     spacestr += "&nbsp&nbsp";
-                    document.write(starstr + spacestr + "<br>")
+                    document.write(starstr + spacestr )
                 }
             }
         }
+        document.write("<br>");
     }
 
 </script>
