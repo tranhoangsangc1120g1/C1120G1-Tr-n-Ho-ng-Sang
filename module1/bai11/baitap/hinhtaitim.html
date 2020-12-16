@@ -11,31 +11,25 @@
     let starstr = "";
     let spacestr = "";
     for (let i = 1; i <= 21; i++) {
-        if (i <= 10) {
-            star = i;
-            for (let j = 1; j <= star; j++) {
-
-                starstr += "*";
-                space = 10 - star;
-                for (let m = 1; m <= space; m++) {
-                    spacestr += "&nbsp&nbsp";
-                    document.write(spacestr + starstr )
+        for (let j = 1; j <= 20; j++) {
+            if (j < 11) {
+                space = i;
+                star = 11 - space;
+                for (let j = 1; j <= star; j++) {
+                    starstr += "*";
                 }
-            }
-
-        } else if (i <= 21) {
-            star = i;
-            for (let k = 12; k <= 21; k++) {
-
-                star += "*";
-                space = 21 - i;
-                for (let n = 12; n <= space; n++) {
+                for (let k = 1; k <= space; k++) {
                     spacestr += "&nbsp&nbsp";
-                    document.write(starstr + spacestr )
                 }
+                document.write(spacestr + starstr);
+                starstr="";
+                spacestr="";
+            } else {
+                document.write("-");
             }
         }
         document.write("<br>");
+
     }
 
 </script>

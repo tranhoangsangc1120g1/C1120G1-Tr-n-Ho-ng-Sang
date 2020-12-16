@@ -10,11 +10,12 @@
     let a = parseFloat(prompt("số tiền vay"))
     let n = parseFloat(prompt("số tháng vay"))
     // let Tn = a * Math.pow((1 - r), n);
-    let Tn="";
+    let Tn = 0;
     let r = parseFloat(prompt("lãi suất ngân hàng tính theo %"))
+
     for (let i = 1; i <= n; i++) {
-             Tn+=a+a*i*r;
-             document.write(Tn);
+        Tn = a * Math.pow((1 + r), n) - a;
+        alert(Tn);
 
     }
 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết một chương trình để đếm số từ trong một chuỗi</title>
+</head>
+<body>
+<script>
+    // let string="mot ngay dep troi ta gap nhau om lay nhau roi xa nhau";
+    // let count=0;
+    // for (let i=0 ;i<string.length;i++){
+    //     if (isNaN(string)){
+    //         count++;
+    //     }
+    //
+    // }
+    // let numspace=0;
+    // for (let j=0;j<string.length;j++){
+    //     if (numspace==""){
+    //         numspace++;
+    //     }
+    // }console.log(numspace);
+    // let numsympol=count-numspace;
+    //
+    // console.log(numsympol);
+
+    function WordCount(str) {
+        return str.split(" ").length;
+    }
+
+    let string = prompt("chuỗi")
+    document.write(WordCount(string) + "từ");
+
+</script>
+</body>
+</html>

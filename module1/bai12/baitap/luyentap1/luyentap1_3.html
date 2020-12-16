@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình khởi tạo mảng số nguyên.
+        Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.</title>
+</head>
+<body>
+<script>
+    let numbers = [];
+    let sum = 0;
+    let gttb;
+    let n = parseInt(prompt("nhập số phần tử của mảng"));
+    for (let i = 0; i < n; i++) {
+        let r = parseInt(prompt("phần tử trong mảng"));
+        numbers[i] = r;
+        sum += numbers[i];
+        var maxInNumbers = Math.max.apply(Math, numbers);
+    }
+    gttb = sum / n;
+    console.log("giá trị trung bình của mảng là:"  + gttb+"<br>" +"giá trị lớn nhất ủa mảng là: "+ maxInNumbers);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn,
+        in ra các phần tử trong mảng.
+        Chú ý: Sử dụng vòng lặp for lồng nhau</title>
+</head>
+<body>
+<script>
+    let numbers = [];
+    for (let i = 0; i < 5; i++) {
+        let numcol = parseInt(prompt("nhập số phần tử của hàng" + i));
+        numbers[i] = new Array(numcol);
+        for (let j = 0; j < numbers.length; j++) {
+            numbers[i][j] = parseInt(prompt("nhập" + i + " " + j))
+
+        }
+    }
+    for (let i in numbers) {
+        console.log("row"+i)
+
+        for (var j in numbers[i]) {
+            console.log(" " + numbers[i][j]);
+
+        }
+    }
+
+
+</script>
+
+</body>
+</html>
