@@ -5,7 +5,7 @@
     <title>Đăng ký thông tin</title>
     <style>
         table, th, td {
-            border: 1px solid black;
+            border: 1px solid #000000;
             border-collapse: collapse;
         }
     </style>
@@ -97,7 +97,7 @@
         <tr>
             <th>Total Money</th>
             <td>
-                <p id=""></p>
+                <p id="totalMoney"></p>
             </td>
         </tr>
     </table>
@@ -161,7 +161,10 @@
             <td>
                 <p id="displayCity"></p>
             </td>
-            <td id="Money"></td>
+            <td>
+                <p id="displaymoney"></p>
+            </td>
+
         </tr>
     </table>
 </div>
@@ -181,6 +184,11 @@
     document.getElementById("displayservice").innerText = '';
     document.getElementById("displaytype_of_room").innerText = '';
     document.getElementById("displayCity").innerText = 'Đà Nẵng';
+    document.getElementById("displaymoney").innerText = '11';
+
+
+
+
 
 
     function submit() {
@@ -197,6 +205,8 @@
         let m = document.getElementById("type_of_room").value;
         let city = document.getElementById("city").value;
 
+
+
         ValidateEmail(d);
         checkId('Id', b, 9);
 
@@ -212,11 +222,10 @@
         document.getElementById("displayservice").innerText = l;
         document.getElementById("displaytype_of_room").innerText = m;
         document.getElementById("displayCity").innerText = city;
-        document.getElementById("displayMoney").innerText = '';
-
 
         let totalmoney = (parseFloat(l) * parseFloat(k)) - (customerType(f) + discountrentdays(k) + discountCity(city));
         document.getElementById("totalMoney").innerText = totalmoney.toString();
+        document.getElementById("displaymoney").innerText = totalmoney.toString();
 
         // let information2 = "Hãy xác nhận lại thông tin của bạn !!! \n"
         //     + "name : " + a + "\n"
@@ -252,6 +261,7 @@
         document.getElementById("service").value = '';
         document.getElementById("type_of_room").value = '';
         document.getElementById("city").value = '';
+        document.getElementById("totalMoney").value = '';
     }
 
     function feature(number) {
@@ -281,7 +291,7 @@
         document.getElementById("service").value = document.getElementById("displayservice").innerText;
         document.getElementById("type_of_room").value = document.getElementById("displaytype_of_room").innerText;
         document.getElementById("city").value = document.getElementById("displayCity").innerText;
-        document.getElementById("totalMoney").innerText = '11111111111';
+        document.getElementById("totalMoney").innerText = '11';
     }
 
     function ValidateEmail(mail) {
