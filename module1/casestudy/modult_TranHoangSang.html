@@ -90,6 +90,7 @@
                     <option value="Đà Nẵng">Đà Nẵng</option>
                     <option value="Huế">Huế</option>
                     <option value="Quảng Nam">Quảng Nam</option>
+                    <option value="Khác">Khác</option>
                 </select>
             </td>
         </tr>
@@ -386,5 +387,23 @@
 
         }
 
+    }
+    function validateName() {
+        let tempname = "";
+        let nameElement = document.getElementById("name");
+        let namechart = nameElement.value;
+        namechart = namechart.trim().toLowerCase()
+        for (let i = 0; i < namechart.length; i++) {
+            if (namechart.charAt(i) === " " && namechart.charAt(i + 1) === " ") {
+                continue;
+            }
+            if (i === 0 || namechart.charAt(i - 1) === " ") {
+                tempname += namechart.charAt(i).toUpperCase();
+                continue;
+            }
+            tempname += namechart.charAt(i);
+        }
+        nameElement.value = tempname;
+        return tempname;
     }
 </script>

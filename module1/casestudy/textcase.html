@@ -90,6 +90,7 @@
                     <option value="Đà Nẵng">Đà Nẵng</option>
                     <option value="Huế">Huế</option>
                     <option value="Quảng Nam">Quảng Nam</option>
+                    <option value="Khác">Khác</option>
                 </select>
             </td>
         </tr>
@@ -187,10 +188,6 @@
     document.getElementById("displaymoney").innerText = '11';
 
 
-
-
-
-
     function submit() {
         let a = document.getElementById("name").value;
         let b = document.getElementById("id").value;
@@ -206,11 +203,10 @@
         let city = document.getElementById("city").value;
 
 
-
         ValidateEmail(d);
         checkId('Id', b, 9);
-
-        document.getElementById("displayName").innerText = a;
+        // validateName(a);
+        document.getElementById("displayName").innerText = validateName();
         document.getElementById("displayId").innerText = b;
         document.getElementById("displayDate").innerText = c;
         document.getElementById("displayEmail").innerText = d;
@@ -387,4 +383,38 @@
         }
 
     }
+    // function validateName() {
+    //     let regName = /^[A-Za-z.]+ [A-Za-z]+$/;
+    //     let name = document.getElementById('name').value;
+    //     if (!regName.test(name)) {
+    //         alert('Please enter your full name (first & last name).');
+    //         document.getElementById('name').focus();
+    //         return false;
+    //     } else {
+    //         alert('Valid name given.');
+    //         name= string.toLocaleUpperCase()
+    //         document.getElementById('name').innerHTML=name;
+    //
+    //         return true;
+    //     }
+    // }
+    function validateName() {
+        let tempname = "";
+        let nameElement = document.getElementById("name");
+        let namechart = nameElement.value;
+        namechart = namechart.trim().toLowerCase()
+        for (let i = 0; i < namechart.length; i++) {
+            if (namechart.charAt(i) === " " && namechart.charAt(i + 1) === " ") {
+                continue;
+            }
+            if (i === 0 || namechart.charAt(i - 1) === " ") {
+                tempname += namechart.charAt(i).toUpperCase();
+                continue;
+            }
+            tempname += namechart.charAt(i);
+        }
+        nameElement.value = tempname;
+        return tempname;
+    }
+
 </script>

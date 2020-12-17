@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được</title>
+</head>
+<body>
+<script>
+    let type=parseFloat(prompt("1. Tinh Dien tich\n2. Tinh chu vi"));
+    let r=parseFloat(prompt("nhap ban kinh hinh tron"));
+    tinh(r, type);
+    function tinh(bk, type) {
+        switch (type) {
+            case 1:
+                alert(" dien tich la : " + (bk*bk*Math.PI));
+                break;
+            case 2:
+                alert(" chu vi la :" + (bk*2*Math.PI));
+            default:
+                alert("Khong co option phu hop");
+        }
+
+    }
+</script>
+</body>
+</html>

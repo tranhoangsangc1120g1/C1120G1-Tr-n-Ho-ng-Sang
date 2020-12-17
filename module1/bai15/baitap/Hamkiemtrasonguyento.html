@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    let limit=parseInt(prompt("nhập khoảng"));
+    timsnt(limit);
+    // function timsnt(limit) {
+    //     if (limit <2){
+    //         document.write("không có số nguyên tố")
+    //     } else if (limit ===2){
+    //         document.write("2 là số nguyên tố")
+    //     }else if (limit >=3){
+    //         for (let i=3;i<limit;i++){
+    //             for (let j=2;j<i;j++){
+    //                 if (i%j===0){
+    //                     break;
+    //                 }else {
+    //                     document.write(i+"" +"là số nguyên tố"+"<br>")
+    //                     break;
+    //                 }
+    //             }
+    //         }
+    //     }
+    //
+    // }
+
+    function timsnt(limit) {
+        for (let i=1;i<=limit;i++){
+            let result = true
+            for (let j=1;j<=i;j++){
+                if (i % j === 0 && j != 1 && i != j) {
+                    result = false
+                    break;
+                }
+            }
+            if (result === true) {
+                document.write(i+"" +"là số nguyên tố"+"<br>")
+            }
+        }
+
+    }
+
+
+    // function timsnt(number) {
+    //     let flg=true;
+    //     if (number > 1 )
+        // if (limit <= 2 && limit > 1 ){
+        //     return true;
+        // } else if (limit >=3){
+        //     for (let i=3;i<limit;i++){
+        //         for (let j=2;j<i;j++){
+        //             if (i%j===0){
+        //                 break;
+        //             }else {
+        //
+        //                 break;
+        //             }
+        //         }
+        //     }
+        // }
+    // }
+
+</script>
+
+</body>
+</html>

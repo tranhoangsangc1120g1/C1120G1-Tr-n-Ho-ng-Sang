@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=[-1,-2,1,2,3]
+    document.write(lon0(a) + '<br>')
+    document.write(be0(a));
+
+    function lon0(mang) {
+        let lon0 = ''
+        for (let i=0;i<mang.length;i++){
+            if (mang[i]>0){
+                lon0+=mang[i];
+            }
+        }
+        return lon0;
+    }
+
+    function be0(mang) {
+        let be0 = ''
+        for (let i=0;i<mang.length;i++){
+            if (mang[i]<0){
+                be0+=mang[i];
+            }
+        }
+        return be0;
+    }
+</script>
+</body>
+</html>

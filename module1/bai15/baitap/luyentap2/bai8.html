@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.</title>
+</head>
+<body>
+<script>
+    let array=[];
+    reverse(array)
+    function reverse(mang) {
+        let n=parseInt(prompt("số phần tử mảng"));
+     for (let i=0;i<n;i++){
+         mang[i]=parseInt(prompt("nhập phần tử của mảng"))
+     }
+     alert("phần tử cảu mảng trước khi đảo : " + mang);
+
+
+     alert("phần tử của mảng sau khi đảo : " + mang.reverse() );
+    }
+</script>
+
+</body>
+</html>

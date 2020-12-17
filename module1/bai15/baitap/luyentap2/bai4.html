@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không.
+        Nếu là ký tự số hàm trả về true, ngược lại trả về false.</title>
+</head>
+<body>
+<script>
+    let symbol=prompt("nhập kí tự muốn kiểm tra");
+    chechkIsnum(symbol);
+    alert(chechkIsnum(symbol));
+    function chechkIsnum() {
+        let a="";
+        if (!isNaN(a)){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+</script>
+</body>
+</html>

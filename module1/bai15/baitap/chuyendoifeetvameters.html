@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+<script>
+let type = parseFloat(prompt('1. Foot to Meter\n2. Meter to Foot', ''));
+let number = parseFloat(prompt('Nhap so', ''));
+document.write('Kết quả: ' + calcul(number, type)+ '<br>');
+// formular(number, type);
+
+// function formular(number, type) {
+    // switch (type) {
+        // case 1:
+        //     document.write('Số đã nhập: ' + number+ '<br>');
+        //     document.write('Type: Foot to Meter'+ '<br>');
+        //     document.write('Kết quả: ' + calcul(number, 1)+ '<br>');
+        // break;
+        // case 2:
+        //     document.write('Số đã nhập: ' + number + '<br>');
+        //     document.write('Type: Meter to Foot'+ '<br>');
+        //     document.write('Kết quả: ' + calcul(number, 2)+ '<br>');
+        // break;
+        // default:
+        //     document.write('CC');
+    // }
+// }
+
+function calcul(number, type) {
+    switch (type) {
+        case 1:
+            return number * 0.305;
+        case 2:
+            return number * 3.279;
+    }
+}
+</script>
+</body>
+</html>

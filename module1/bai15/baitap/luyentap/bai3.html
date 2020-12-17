@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo hàm nhận vào hai tham số.
+        Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng.
+        Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.</title>
+</head>
+<body>
+<script>
+    let num1=parseFloat(prompt("nhap so thu 1"));
+    let num2=parseFloat(prompt("nhap so thu 2"));
+    ham2thamso(num1,num2);
+    function ham2thamso(num1,num2) {
+        if(num1>num2){
+            alert("num1 lon hon")
+        }else {
+            alert("tong cua 2 tham so la : "+ (num1 + num2))
+        }
+
+    }
+
+</script>
+
+</body>
+</html>
