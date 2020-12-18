@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body onload="translate()">
+<script>
+    function translate(word) {
+        let eng = ["Replace","Research","Resource","Respond","Multi-task","Digital","Allocate","Analog",
+            "Appropriate","Circuit"]
+        let vn = ["thay thế","nghiên cứ","nguồn","phản hồi"," Đa nhiệm","Số, thuộc về số",
+            "Phân phối","Tương tự","Thích  hợp","Mạch",];
+        for (let i = 0; i <= eng.length; i++) {
+            if (word === eng[i]) {
+                eng[i] === vn[i];
+                return (vn[i]);
+            }
+        }
+        return ("không có trong từ điển của tui")
+    }
+    let word = prompt("input the translate word ");
+    alert((translate(word)));
+</script>
+
+</body>
+</html>
