@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="fill" placeholder="Name of Customers"> <input type="button" onclick="addCustomers()" value="add">
+<p>Amount</p><span id="Amount"></span>
+<p id="showInfor"></p>
+<script>
+    let listCustomer = ["Customer1 info ", " Customer2 info",];
+
+    showInfo()
+
+    function showInfo() {
+        let listCustomertable = '<table border="1">\n' +
+            '        <tr>\n' +
+            '            <th>STT</th>\n' +
+            '            <th>CustomerName</th>\n' +
+            '            <th>Add</th>\n' +
+            '            <th>Delete</th>\n' +
+            '        </tr>'
+        for (let i = 0; i < listCustomer.length; i++) {
+            listCustomertable += '<tr>\n' +
+                '            <td>' + (i + 1) + '</td>\n' +
+                '            <td>' + listCustomer[i] + '</td>\n' +
+                '            <td>' + '<input type="button" value="change" onclick="changeName(' + (i) + ')"></td>\n' +
+                '            <td>' + '<input type="button" value="del" onclick="deleteCustomer (' + (i) + ')"></td>\n' +
+                '        </tr>\n'
+        }
+        listCustomertable += '</table>';
+        document.getElementById("showInfor").innerHTML = listCustomertable;
+        document.getElementById("Amount").innerHTML = listCustomer.length;
+    }
+
+    function addCustomers() {
+        let newCustomers = document.getElementById("fill").value;
+        if (newCustomers !== "") {
+            listCustomer.push(newCustomers);
+        } else {
+            alert("pls enter your name");
+        }
+        document.getElementById("fill").value="",
+        showInfo();
+    }
+
+    function deleteCustomer(id) {
+        let delCus = confirm("Are you sure you want to delete information? " + listCustomer[id]);
+        if (delCus) {
+            listCustomer.splice(id, 1)
+        }
+        showInfo();
+    }
+    function changeName(id) {
+        let newChange= prompt("Enter your change name");
+        if (newChange !==""&&newChange !==null){
+            listCustomer[id] =newChange
+        }else {
+            alert(" pls enter change name")
+        }
+       showInfo();
+    }
+</script>
+</body>
+</html>
