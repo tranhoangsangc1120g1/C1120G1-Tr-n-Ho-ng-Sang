@@ -17,7 +17,7 @@
 <body>
 <button style="width: 100px" onclick="feature1()">Show information</button>
 <button style="width: 100px" onclick="feature2()">Addnew information</button>
-<button  style="width: 100px" onclick="exit()">Exit</button>
+<button  style="width: 100px; background-color: red" onclick="exit()" >Exit</button>
 <div id="edit" style="display: none">
 
     <caption><h1>Customer Information</h1></caption>
@@ -209,6 +209,7 @@
 
             let tableListCustomer = document.getElementById("tableListCustomer");
             let str = "        <tr>\n" +
+                "            <th>STT</th>\n" +
                 "            <th>Name</th>\n" +
                 "            <th>ID</th>\n" +
                 "            <th>Date</th>\n" +
@@ -223,17 +224,17 @@
                 "            <th>City</th>\n" +
                 "            <th>TotalMoney</th>\n" +
                 "            <th>Delete</th>\n" +
-                "            <th>Change</th>\n" +
+                "            <th><input type=\"button\" value=\"change\" onclick=\"changeInfo()\"></th>\n" +
                 "        </tr>";
 
             for (let i = 0; i < listCustomer.length; i++) {
-                str += "<tr>";
+                str += "<tr>"+ '<td>' + (i + 1) + '</td>'
                 for (let j = 0; j < listCustomer[i].length; j++) {
                     str += "<td>" + listCustomer[i][j] + "</td>"
 
                 }
-                str += '<td><input type="button" value="change" onclick="changeName(' + (i) + ')"></td>'+
-                    '<td><input type="button" value="del" onclick="deleteCustomer (' + (i) + ')"></td>' + "</tr>";
+                str +=  '<td><input type="button" value="del" onclick="deleteCustomer (' + (i) + ')"></td>' + "</tr>";
+
             }
 
 
@@ -378,14 +379,45 @@
         feature1();
 
     }
-    function changeName(id) {
-        let newChange = prompt("Enter your change name");
-        if (newChange !== "" && newChange !== null) {
-            listCustomer[id] = newChange;
-        } else {
-            alert(" pls enter change name");
+    function changeInfo(id) {
+
+            let chooseEditInfo = parseInt(prompt("nhập số thứ tự người muốn sửa"));
+            if(chooseEditInfo>listCustomer.length){
+                alert("không đúng");
+                changeInfo();
+            }
+            let edit1 = parseInt(prompt("1.Tên : " +  '\n' +
+                "2.cmnd : " + '\n' +
+                "3.Ngày sinh : " +  '\n' +
+                "4.email :" + '\n' +
+                "5.Địa chỉ :" + '\n' +
+                "6.Loại Customer  :" + '\n' +
+                "7.Giảm giá  :" + '\n' +
+                "8.Số lượng đi kèm:" + '\n' +
+                "9.Số ngày:" +  '\n' +
+                "10.Loại dịch vụ  :" +'\n' +
+                "11.Loại phòng :" +  '\n'));
+            switch (edit1) {
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                case 11:
+                    editcustomer1(chooseEditInfo-1,edit1-1);
+
         }
-        feature1();
+        function editcustomer1(x,y) {
+            let newInformation =prompt("hãy nhập nội dung bạn muốn sửa")
+            listCustomer[x].splice(y,1,newInformation);
+            feature1();
+        }
+
     }
     function exit() {
     let exitchovualongnhau=confirm(
